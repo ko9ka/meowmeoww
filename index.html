@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Purple Instagram</title>
+<title>madk1d Insta</title>
 
 <style>
 body {
@@ -15,7 +15,6 @@ body {
     margin: 0;
 }
 
-/* CONTAINER */
 .container {
     width: 100%;
     max-width: 500px;
@@ -26,7 +25,6 @@ body {
     box-shadow: 0 8px 20px rgba(120, 80, 180, 0.15);
 }
 
-/* INPUT */
 input {
     width: 100%;
     padding: 12px;
@@ -36,7 +34,6 @@ input {
     background: #faf7ff;
 }
 
-/* BUTTON */
 button {
     width: 100%;
     padding: 12px;
@@ -49,7 +46,6 @@ button {
     cursor: pointer;
 }
 
-/* POST */
 .post {
     background: white;
     padding: 15px;
@@ -157,8 +153,6 @@ document.getElementById("postBtn").onclick = async () => {
     const text = document.getElementById("content").value;
     const image = document.getElementById("imageUrl").value;
 
-    if (!text && !image) return alert("Введите текст или картинку");
-
     await addDoc(collection(db, "requests"), {
         name: auth.currentUser.displayName,
         photo: auth.currentUser.photoURL,
@@ -179,18 +173,18 @@ window.likePost = async (id) => {
     });
 };
 
-/* 🔥 ДЕМО ПОСТЫ (1 РАЗ) */
+/* 🔥 DEMO POSTS (madk1d added) */
 async function createDemoPostsIfEmpty() {
     const snap = await getDocs(collection(db, "requests"));
     if (!snap.empty) return;
 
     const demoPosts = [
         {
-            name: "💜 Aesthetic Girl",
-            photo: "https://i.pravatar.cc/150?img=47",
-            text: "Purple vibes only ✨",
+            name: "madk1d",
+            photo: "https://i.pravatar.cc/150?img=3",
+            text: "Покоряем Америку 🇺🇸🔥",
             image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-            likes: 12
+            likes: 42
         },
         {
             name: "🌸 Dream Life",
@@ -207,7 +201,7 @@ async function createDemoPostsIfEmpty() {
             likes: 8
         },
         {
-            name: "✨ Minimal Girl",
+            name: "✨ Minimal Life",
             photo: "https://i.pravatar.cc/150?img=32",
             text: "Less is more 🤍",
             image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
